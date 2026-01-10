@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type='text/css' href="{% static 'core/header.css' %}"> 
+    <link rel="stylesheet" type='text/css' href="{% static 'core/main.css' %}">
+    <title>Document</title>
+</head>
+<body>
+   <nav>
+    <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">SignUp</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">AboutUs</a></li></ul>
+    <ul>
+        <li class="hideOnMobile"><a href="#">Home</a></li>
+        <li class="hideOnMobile"><a href="#">SignUp</a></li>
+        <li class="hideOnMobile"><a href="#">Login</a></li>
+        <li class="hideOnMobile"><a href="#">Dashboard</a></li>
+        <li class="hideOnMobile"><a href="#">About Us</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+   </nav>
+   <main>
+    <h2>Personal assistant</h2>
+    <div class="query">
+      <h2 style="margin-bottom: 20px;">Hello! how can I assist you today?</h2>
+      <form class="prompt-form">
+        <textarea id="prompt" name="prompt" rows="1" placeholder="Enter your prompt..." class="auto-grow"></textarea>
+        <button type="submit">Ask me</button>
+      </form>
+   </div> 
+   </main>
+   
+   <script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+    }
+   </script>
+</body>
+</html>

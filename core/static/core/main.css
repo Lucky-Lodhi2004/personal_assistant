@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+
+body {
+  font-family: "Inter", sans-serif;
+  background-image : url(lights.jpg);
+  background-size : cover;
+  background-repeat : no-repeat;
+  background-position : center;
+  color: rgb(255, 255, 255);
+}
+
+main {
+  min-height: 100vh;
+}
+main h2 {
+    margin-top: 10px; 
+    margin-left: 10px;
+}
+
+.query {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.prompt-form {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prompt-form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  min-height: 30px;
+  padding: 12px 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  resize : none;
+  overflow: hidden;
+  border: 1px solid white;
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  box-shadow : 3px 3px 5px rgba(239, 238, 238, 0.587);
+}
+textarea::placeholder{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: rgb(126, 117, 117)
+}
+.prompt-form button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  margin-left: auto;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-family: "Inter", sans-serif;
+  box-shadow : 3px 3px 5px rgba(239, 238, 238, 0.655);
+}
